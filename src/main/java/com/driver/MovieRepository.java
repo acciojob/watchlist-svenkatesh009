@@ -19,6 +19,7 @@ public class MovieRepository {
     }
 
     public void pair_Movie_Director(String director,String movie){
+        if(!movieData.containsKey(movie) || !DirectorData.containsKey(director)) return;
         if(movieDirectorData.containsKey(director)){
             List<String> oldList=movieDirectorData.get(director);
             oldList.add(movie);
