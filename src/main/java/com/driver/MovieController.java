@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@RequestMapping("movies")
 public class MovieController {
     MovieService movieService=new MovieService();
      @PostMapping("POST /movies/add-movie")
