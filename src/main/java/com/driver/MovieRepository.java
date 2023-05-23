@@ -48,12 +48,12 @@ public class MovieRepository {
 
     public List<String> get_Movie_Director(String director){
         if(DirectorData.containsKey(director))return movieDirectorData.get(director);
-        return null;
+        return new ArrayList<>();
     }
 
     public List<String> get_Movie_All(){
         List<String> moviesList=new ArrayList<>();
-        moviesList.addAll(movieDirectorData.keySet());
+        moviesList.addAll(movieData.keySet());
         return moviesList;
     }
 
