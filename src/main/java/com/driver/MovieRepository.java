@@ -39,11 +39,11 @@ public class MovieRepository {
         if(movieData.containsKey(movie)){
             return movieData.get(movie);
         }
-        return null;
+        return new Movie();
     }
 
     public Director get_Director(String Director){
-        return DirectorData.getOrDefault(DirectorData.get(Director),null);
+        return DirectorData.getOrDefault(DirectorData.get(Director),new Director());
     }
 
     public List<String> get_Movie_Director(String director){
